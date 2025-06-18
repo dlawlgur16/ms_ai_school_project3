@@ -1,44 +1,54 @@
-# GPTutor (AI 기반 교육 지원 시스템)
+# 외국인 민원 AI 상담 시스템
 
 ## 프로젝트 소개
 
-GPTutor는 AI를 활용한 교육 지원 시스템으로, 학습자들에게 개인화된 학습 경험을 제공합니다.
-
-## 구현 내용
-
-1. **Azure Custom Vision 연동**
-   - 이미지 기반 학습 자료 분석
-   - 시각적 콘텐츠 인식 및 처리
-2. **Azure Blob Storage 활용**
-   - 학습 자료 저장 및 관리
-   - 대용량 데이터 처리 지원
-3. **Flask 웹 서버**
-   - RESTful API 구현
-   - 웹 인터페이스 제공
+외국인 민원 AI 상담 시스템은 외국인들이 한국에서 겪는 다양한 민원 사항을 AI를 통해 해결할 수 있도록 도와주는 시스템입니다. 다국어 지원과 실시간 상담 기능을 제공하여 외국인들의 한국 생활 적응을 돕습니다.
 
 ## 주요 기능
 
-1. **AI 기반 QnA 시스템**
-   - GPT를 활용한 질문-답변 시스템
-   - RAG(Retrieval-Augmented Generation) 기반 정확한 답변 제공
-2. **개인화된 학습 관리**
-   - 개인별 학습 내용 저장 및 관리
-   - 학습 진도 추적
-   - 맞춤형 복습 문제 생성
-3. **공동 학습 기능**
-   - 최근 질문 공유
-   - 학습 내용 공유 및 협업
+1. **다국어 민원 상담**
+
+   - 영어, 중국어, 베트남어 등 다국어 지원
+   - 실시간 번역 및 상담 서비스
+   - 민원 유형별 맞춤 상담 제공
+
+2. **AI 기반 상담 시스템**
+
+   - GPT를 활용한 자연어 처리
+   - 민원 유형 자동 분류
+   - 맞춤형 해결책 제시
+
+3. **민원 이력 관리**
+   - 개인별 민원 이력 저장
+   - 상담 내용 추적
+   - 해결 상태 모니터링
 
 ## 기술 스택
 
 - Python
+- Flask
 - Azure Custom Vision
 - Azure Blob Storage
-- Flask
+- GPT API
 
-## 주의사항
+## 구현 내용
 
-- 현재는 Azure 리소스 연결이 끊겨 있어 일부 기능이 정상적으로 작동하지 않을 수 있습니다.
+1. **Azure Custom Vision 연동**
+
+   - 민원 서류 이미지 분석
+   - 서류 유형 자동 분류
+   - OCR을 통한 텍스트 추출
+
+2. **Azure Blob Storage 활용**
+
+   - 민원 서류 저장
+   - 상담 이력 관리
+   - 대용량 데이터 처리
+
+3. **Flask 웹 서버**
+   - RESTful API 구현
+   - 실시간 상담 인터페이스
+   - 다국어 지원 시스템
 
 ## 설치 방법
 
@@ -49,13 +59,27 @@ git clone [repository-url]
 ```
 
 2. 환경변수 파일(.env) 작성
-   - 예시: `.env.example` 참고
+
+   - Azure 리소스 키 설정
+   - GPT API 키 설정
+   - 기타 필요한 환경변수 설정
+
 3. 의존성 설치
-   - Python: `pip install -r requirements.txt`
-   - Node.js(프론트): `npm install`
+
+```bash
+pip install -r requirements.txt
+```
+
 4. 서버 실행
-   - Flask: `python app.py`
-   - React Native: `npm start` 또는 `expo start`
+
+```bash
+python app.py
+```
+
+## 주의사항
+
+- 현재는 Azure 리소스 연결이 끊겨 있어 일부 기능이 정상적으로 작동하지 않을 수 있습니다.
+- 민감한 개인정보를 다루므로 보안에 주의해야 합니다.
 
 ## 라이선스
 
